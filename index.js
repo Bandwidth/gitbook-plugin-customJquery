@@ -1,6 +1,7 @@
 var cheerio = require('cheerio');
 var fs = require('fs');
 var url = require('url');
+var path = require('path');
 
 var urls = [];
 
@@ -25,11 +26,18 @@ module.exports = {
 		},
 
 		"finish" : function () {
-			var modifyPage = function () {return ''}
+			var modifyPage;
 			var $, $el, html;
-			var pathFile = this.options.pluginsConfig && this.options.pluginsConfig.customJquery && this.options.pluginsConfig.customJquery.Jquery;
-
-			if (pathFile && fs.existsSync(pathFile)) modifyPage = require(pathFile);
+			var pathFile = this.options.pluginsConfig && this.options.pluginsConfig.customJquery && this.options.pluginsConfig.customJquery.js;
+			var js = path.join(process.cwd(), pathFile);
+			if (pathFile && fs.existsSync(pathFile)) {
+				modifyPage = require(js);
+			}
+			else {
+				modifyPage = function ($) {
+					return $.html();
+				}
+			}
 
 			urls.forEach(item => {
 				html = fs.readFileSync(item.url, {encoding: 'utf-8'});

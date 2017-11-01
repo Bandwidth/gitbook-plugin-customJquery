@@ -1,6 +1,8 @@
 ## customJquery
 After each page is renedered, allows you to modify the raw HTML with jquery before serving.  Use this instead of running javascript on each page load to add/remove HTML for each page.
 
+⚠️ This is super hacky, there are most likely 1,000,000 different and better ways to accomplish what this does 😎 ⚠️
+
 ## Book.json
 
 Require this by adding `customJquery@git+https://github.com/dtolb/gitbook-plugin-customJquery.git` to the plugins

@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-customJquery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds class to html in nav bar",
   "main": "index.js",
   "scripts": {

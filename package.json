@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-customJquery",
+  "name": "gitbook-plugin-custom-jquery-postprocessing",
   "version": "1.0.1",
   "description": "Adds class to html in nav bar",
   "main": "index.js",

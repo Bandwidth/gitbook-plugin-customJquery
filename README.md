@@ -5,13 +5,13 @@ After each page is renedered, allows you to modify the raw HTML with jquery befo
 
 ## Book.json
 
-Require this by adding `customJquery@git+https://github.com/dtolb/gitbook-plugin-customJquery.git` to the plugins
+Require this by adding `custom-jquery-postprocessing` to the plugins
 
 customJquery requies a `.js` file to be passed as the object for `pluginsConfig`
 
 ```json
 {
-    "plugins": ["customJquery@git+https://github.com/dtolb/gitbook-plugin-customJquery.git" ],
+    "plugins": ["custom-jquery-postprocessing" ],
     "pluginsConfig": {
       "customJquery": {
         "js": "js/custom.js"
